@@ -17,13 +17,11 @@ public class GitHubEnterprisePage {
 
     @Test
 
-    void menuHoverAndHeaderChekTest() {
+    void menuHoverAndHeaderCheckTest() {
         open("");
         $("[aria-label='Global']").$(withText("Solutions")).hover();
         $("[href='/enterprise']").click();
-        sleep (3000);
-        $("#hero-section-brand-heading").shouldHave(Condition.partialText("The AI-powered"));
-
+        $("#hero-section-brand-heading").shouldHave(Condition.exactText("The AI-powered developer platform."));
     }
 
 
